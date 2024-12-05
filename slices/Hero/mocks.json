@@ -1,0 +1,67 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"eyebrow": {
+				"__TYPE__": "FieldContent",
+				"value": "temperature",
+				"type": "Text"
+			},
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "bag",
+				"type": "Text"
+			},
+			"subtitle": {
+				"__TYPE__": "FieldContent",
+				"value": "seen",
+				"type": "Text"
+			},
+			"buttons": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"destination",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://slicemachine.dev",
+										"text": "blind"
+									}
+								}
+							],
+							[
+								"default",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": true
+								}
+							]
+						]
+					}
+				]
+			},
+			"end_colour": {
+				"__TYPE__": "FieldContent",
+				"value": "#3e2fdb",
+				"type": "Color"
+			},
+			"start_colour": {
+				"__TYPE__": "FieldContent",
+				"value": "#4fbeb7",
+				"type": "Color"
+			},
+			"label": {
+				"__TYPE__": "FieldContent",
+				"value": "greater",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

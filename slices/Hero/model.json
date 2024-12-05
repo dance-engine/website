@@ -1,0 +1,89 @@
+{
+  "id": "hero",
+  "type": "SharedSlice",
+  "name": "Hero",
+  "description": "Hero",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "eyebrow": {
+          "type": "Text",
+          "config": {
+            "label": "Eyebrow",
+            "placeholder": ""
+          }
+        },
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "subtitle": {
+          "type": "Text",
+          "config": {
+            "label": "Subtitle",
+            "placeholder": ""
+          }
+        },
+        "buttons": {
+          "type": "Group",
+          "config": {
+            "label": "buttons",
+            "repeat": true,
+            "fields": {
+              "destination": {
+                "type": "Link",
+                "config": {
+                  "label": "Destination",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "select": null,
+                  "allowText": true
+                }
+              },
+              "default": {
+                "type": "Boolean",
+                "config": {
+                  "label": "Default",
+                  "placeholder_false": "false",
+                  "placeholder_true": "true",
+                  "default_value": false
+                }
+              }
+            }
+          }
+        },
+        "start_colour": {
+          "type": "Color",
+          "config": {
+            "label": "Start Colour",
+            "placeholder": ""
+          }
+        },
+        "end_colour": {
+          "type": "Color",
+          "config": {
+            "label": "End Colour",
+            "placeholder": ""
+          }
+        },
+        "label": {
+          "type": "Text",
+          "config": {
+            "label": "label",
+            "placeholder": "For jumping to sections of page"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
