@@ -5,6 +5,7 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
 type PageDocumentDataSlicesSlice =
+  | PeopleSlice
   | StaticBigPictureSlice
   | MobileVideoSlice
   | BigVideoSlice
@@ -1027,6 +1028,113 @@ export type MobileVideoSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Item in *People → Default → Primary → People*
+ */
+export interface PeopleSliceDefaultPrimaryPeopleItem {
+  /**
+   * Name field in *People → Default → Primary → People*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: people.default.primary.people[].name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name: prismic.KeyTextField;
+
+  /**
+   * description field in *People → Default → Primary → People*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: people.default.primary.people[].description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * Photo field in *People → Default → Primary → People*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: people.default.primary.people[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
+ * Primary content in *People → Default → Primary*
+ */
+export interface PeopleSliceDefaultPrimary {
+  /**
+   * Label field in *People → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: For jumping to sections of page
+   * - **API ID Path**: people.default.primary.label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  label: prismic.KeyTextField;
+
+  /**
+   * Eyebrow field in *People → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: people.default.primary.eyebrow
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  eyebrow: prismic.KeyTextField;
+
+  /**
+   * Title field in *People → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: people.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * People field in *People → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: people.default.primary.people[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  people: prismic.GroupField<Simplify<PeopleSliceDefaultPrimaryPeopleItem>>;
+}
+
+/**
+ * Default variation for People Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type PeopleSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<PeopleSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *People*
+ */
+type PeopleSliceVariation = PeopleSliceDefault;
+
+/**
+ * People Shared Slice
+ *
+ * - **API ID**: `people`
+ * - **Description**: People
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type PeopleSlice = prismic.SharedSlice<"people", PeopleSliceVariation>;
+
+/**
  * Primary content in *StaticBigPicture → Default → Primary*
  */
 export interface StaticBigPictureSliceDefaultPrimary {
@@ -1195,6 +1303,11 @@ declare module "@prismicio/client" {
       MobileVideoSliceVariation,
       MobileVideoSliceDefault,
       MobileVideoSliceNoBar,
+      PeopleSlice,
+      PeopleSliceDefaultPrimaryPeopleItem,
+      PeopleSliceDefaultPrimary,
+      PeopleSliceVariation,
+      PeopleSliceDefault,
       StaticBigPictureSlice,
       StaticBigPictureSliceDefaultPrimary,
       StaticBigPictureSliceVariation,
