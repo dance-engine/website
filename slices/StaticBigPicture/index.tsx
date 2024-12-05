@@ -27,22 +27,24 @@ const StaticBigPicture = ({ slice }: StaticBigPictureProps): JSX.Element => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="w-full mt-8 mb-24"
+      className="w-full mt-8 mb-24 lg:mb-36"
       id={cssId}
     >
       { slice?.primary?.label ? <a id={slice.primary.label}></a> : null }
-      <div className={`container mx-auto text-lg max-w-5xl flex flex-col items-stretch`}>
+      <div className={`container mx-auto text-lg max-w-5xl flex flex-col lg:items-stretch`}>
 
         <div className="px-6 py-12 w-full">
           <div className="eyebrow uppercase mb-3 text-sm">{slice?.primary?.eyebrow}</div>
           <h1 className="text-4xl font-light leading-tight -ml-[0.05em] mb-4">{slice?.primary?.title}</h1>
-          <div className="text-justify prose-2xl"> 
+          <div className="text-justify prose-base lg:prose-2xl"> 
             <PrismicRichText field={slice?.primary?.description}/>
           </div>
         </div>
         
         {slice?.primary?.image 
-          ? <PrismicImage field={slice.primary.image} className="relative top-8 -mt-20"/>
+          ? <div className="overflow-x-clip lg:overflow-x-visible overflow-y-visible">
+              <PrismicImage field={slice.primary.image} className="relative top-8 -mt-16 w-full object-cover scale-125 lg:w-full mx-auto"/>
+            </div>
           : null 
         }
       </div>

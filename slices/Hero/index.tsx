@@ -32,10 +32,10 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
         <div className="eyebrow uppercase mb-3 font-bold">{slice.primary.eyebrow}</div>
         <h1 className="text-6xl font-light max-w-[8em] leading-[0.85em] -ml-[0.05em] mb-8">{slice.primary.title}</h1>
         <h2 className="text-3xl">{slice.primary.subtitle}</h2>
-        <div className="buttons flex gap-4 mt-12 ">
+        <div className="buttons flex flex-wrap gap-4 mt-12 ">
           {slice.primary.buttons.map((button,index) => {
             const buttonBg = button.default ? "bg-black text-white" : "text-black"
-            return <PrismicNextLink key={`${slice.id}-hero-buttons-${index}`} className={`${buttonBg} block rounded-full border-black border-2 font-bold uppercase px-6 py-2 text-lg`} field={button.destination}>{button.destination.text}</PrismicNextLink>
+            return <PrismicNextLink key={`${slice.id}-hero-buttons-${index}`} className={`${buttonBg} whitespace-nowrap block rounded-full border-black border-2 font-bold uppercase px-6 py-2 text-lg`} field={button.destination}>{button.destination.text}</PrismicNextLink>
           })}
         </div>
       </div>
