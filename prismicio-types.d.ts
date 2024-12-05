@@ -5,6 +5,7 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
 type PageDocumentDataSlicesSlice =
+  | CustomerLogosSlice
   | PeopleSlice
   | StaticBigPictureSlice
   | MobileVideoSlice
@@ -1042,14 +1043,14 @@ export interface PeopleSliceDefaultPrimaryPeopleItem {
   name: prismic.KeyTextField;
 
   /**
-   * description field in *People → Default → Primary → People*
+   * Bio field in *People → Default → Primary → People*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: people.default.primary.people[].description
+   * - **API ID Path**: people.default.primary.people[].bio
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  description: prismic.RichTextField;
+  bio: prismic.RichTextField;
 
   /**
    * Photo field in *People → Default → Primary → People*
@@ -1060,6 +1061,61 @@ export interface PeopleSliceDefaultPrimaryPeopleItem {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   image: prismic.ImageField<never>;
+
+  /**
+   * Role field in *People → Default → Primary → People*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: people.default.primary.people[].role
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  role: prismic.KeyTextField;
+}
+
+/**
+ * Item in *People → threeColumns → Primary → People*
+ */
+export interface PeopleSliceThreeColumnsPrimaryPeopleItem {
+  /**
+   * Name field in *People → threeColumns → Primary → People*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: people.threeColumns.primary.people[].name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name: prismic.KeyTextField;
+
+  /**
+   * Bio field in *People → threeColumns → Primary → People*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: people.threeColumns.primary.people[].bio
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  bio: prismic.RichTextField;
+
+  /**
+   * Photo field in *People → threeColumns → Primary → People*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: people.threeColumns.primary.people[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Role field in *People → threeColumns → Primary → People*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: people.threeColumns.primary.people[].role
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  role: prismic.KeyTextField;
 }
 
 /**
@@ -1121,9 +1177,69 @@ export type PeopleSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
+ * Primary content in *People → threeColumns → Primary*
+ */
+export interface PeopleSliceThreeColumnsPrimary {
+  /**
+   * Label field in *People → threeColumns → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: For jumping to sections of page
+   * - **API ID Path**: people.threeColumns.primary.label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  label: prismic.KeyTextField;
+
+  /**
+   * Eyebrow field in *People → threeColumns → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: people.threeColumns.primary.eyebrow
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  eyebrow: prismic.KeyTextField;
+
+  /**
+   * Title field in *People → threeColumns → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: people.threeColumns.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * People field in *People → threeColumns → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: people.threeColumns.primary.people[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  people: prismic.GroupField<
+    Simplify<PeopleSliceThreeColumnsPrimaryPeopleItem>
+  >;
+}
+
+/**
+ * threeColumns variation for People Slice
+ *
+ * - **API ID**: `threeColumns`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type PeopleSliceThreeColumns = prismic.SharedSliceVariation<
+  "threeColumns",
+  Simplify<PeopleSliceThreeColumnsPrimary>,
+  never
+>;
+
+/**
  * Slice variation for *People*
  */
-type PeopleSliceVariation = PeopleSliceDefault;
+type PeopleSliceVariation = PeopleSliceDefault | PeopleSliceThreeColumns;
 
 /**
  * People Shared Slice
@@ -1306,8 +1422,11 @@ declare module "@prismicio/client" {
       PeopleSlice,
       PeopleSliceDefaultPrimaryPeopleItem,
       PeopleSliceDefaultPrimary,
+      PeopleSliceThreeColumnsPrimaryPeopleItem,
+      PeopleSliceThreeColumnsPrimary,
       PeopleSliceVariation,
       PeopleSliceDefault,
+      PeopleSliceThreeColumns,
       StaticBigPictureSlice,
       StaticBigPictureSliceDefaultPrimary,
       StaticBigPictureSliceVariation,
