@@ -15,13 +15,14 @@ const MobileVideo = ({ slice }: MobileVideoProps): JSX.Element => {
   const flexDirection = slice?.primary?.video_placement == 'Right' ? "flex-row" :  "flex-row-reverse"
   return (
     <Fragment>
+    {slice.variation != "noBar" ?
     <style>
     {`
       #${cssId} {
         background-image: linear-gradient(125deg, oklch(from ${slice?.primary?.start_colour} 0.5 0.1 h) 40%, oklch(from ${slice?.primary?.end_colour} 0.7 0.2 h) 100%);
       }
     `}
-    </style>
+    </style> : null }
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
