@@ -21,18 +21,20 @@ const BigVideo = ({ slice }: BigVideoProps): JSX.Element => {
         <div className="px-6">
           <div className="eyebrow uppercase mb-3 text-sm">{slice.primary.eyebrow}</div>
           <h1 className="text-4xl font-light leading-[0.85em] -ml-[0.05em] mb-4">{slice.primary.title}</h1>
-          <div className="text-lg"> 
+          <div className="text-lg prose-base lg:prose-2xl "> 
             <PrismicRichText field={slice.primary.description}/>
           </div>
         </div>
         
 
-
-        {isFilled.linkToMedia(slice.primary.video_hosted) 
-          ? <video autoPlay={true} controls loop className="mt-6 rounded-xl border-4 border-gray-50/20">
-              <source src={slice.primary.video_hosted.url} type="video/mp4" />
-            </video>
-          : <div>No video</div>}
+        <div className="mx-6 lg:mx-0">
+          {isFilled.linkToMedia(slice.primary.video_hosted) 
+            ? <video autoPlay={true} controls loop className="mt-6 rounded-xl border-4  border-gray-50/20">
+                <source src={slice.primary.video_hosted.url} type="video/mp4" />
+              </video>
+            : null }
+        </div>
+        
         {/* <pre>{JSON.stringify(slice.primary,null,2)}</pre> */}
 
       </div>
