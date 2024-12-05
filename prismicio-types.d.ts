@@ -5,6 +5,7 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
 type PageDocumentDataSlicesSlice =
+  | StaticBigPictureSlice
   | MobileVideoSlice
   | BigVideoSlice
   | HeroSlice
@@ -1025,6 +1026,111 @@ export type MobileVideoSlice = prismic.SharedSlice<
   MobileVideoSliceVariation
 >;
 
+/**
+ * Primary content in *StaticBigPicture → Default → Primary*
+ */
+export interface StaticBigPictureSliceDefaultPrimary {
+  /**
+   * label field in *StaticBigPicture → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: For jumping to sections of page
+   * - **API ID Path**: static_big_picture.default.primary.label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  label: prismic.KeyTextField;
+
+  /**
+   * Eyebrow field in *StaticBigPicture → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: static_big_picture.default.primary.eyebrow
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  eyebrow: prismic.KeyTextField;
+
+  /**
+   * Title field in *StaticBigPicture → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: static_big_picture.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Description field in *StaticBigPicture → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: static_big_picture.default.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * Image field in *StaticBigPicture → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: static_big_picture.default.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Start Colour field in *StaticBigPicture → Default → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: static_big_picture.default.primary.start_colour
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  start_colour: prismic.ColorField;
+
+  /**
+   * End Colour field in *StaticBigPicture → Default → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: static_big_picture.default.primary.end_colour
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  end_colour: prismic.ColorField;
+}
+
+/**
+ * Default variation for StaticBigPicture Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type StaticBigPictureSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<StaticBigPictureSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *StaticBigPicture*
+ */
+type StaticBigPictureSliceVariation = StaticBigPictureSliceDefault;
+
+/**
+ * StaticBigPicture Shared Slice
+ *
+ * - **API ID**: `static_big_picture`
+ * - **Description**: StaticBigPicture
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type StaticBigPictureSlice = prismic.SharedSlice<
+  "static_big_picture",
+  StaticBigPictureSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -1089,6 +1195,10 @@ declare module "@prismicio/client" {
       MobileVideoSliceVariation,
       MobileVideoSliceDefault,
       MobileVideoSliceNoBar,
+      StaticBigPictureSlice,
+      StaticBigPictureSliceDefaultPrimary,
+      StaticBigPictureSliceVariation,
+      StaticBigPictureSliceDefault,
     };
   }
 }

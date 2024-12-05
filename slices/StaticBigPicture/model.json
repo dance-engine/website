@@ -1,0 +1,71 @@
+{
+  "id": "static_big_picture",
+  "type": "SharedSlice",
+  "name": "StaticBigPicture",
+  "description": "StaticBigPicture",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "label": {
+          "type": "Text",
+          "config": {
+            "label": "label",
+            "placeholder": "For jumping to sections of page"
+          }
+        },
+        "eyebrow": {
+          "type": "Text",
+          "config": {
+            "label": "Eyebrow",
+            "placeholder": ""
+          }
+        },
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,list-item,o-list-item,rtl"
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "start_colour": {
+          "type": "Color",
+          "config": {
+            "label": "Start Colour",
+            "placeholder": ""
+          }
+        },
+        "end_colour": {
+          "type": "Color",
+          "config": {
+            "label": "End Colour",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

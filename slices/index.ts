@@ -10,4 +10,5 @@ export const components = {
   header: dynamic(() => import("./Header")),
   hero: dynamic(() => import("./Hero")),
   mobile_video: dynamic(() => import("./MobileVideo")),
+  static_big_picture: dynamic(() => import("./StaticBigPicture")),
 };

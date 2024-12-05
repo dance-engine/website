@@ -33,7 +33,7 @@ const MobileVideo = ({ slice }: MobileVideoProps): JSX.Element => {
       <div className={`container mx-auto text-lg max-w-5xl flex ${flexDirection} items-stretch gap-12`}>
 
         <div className="px-6 py-12 w-full">
-          <div className="eyebrow uppercase mb-3 text-sm">{slice?.primary?.eyebrow} - {JSON.stringify(slice.variation,null,2)}</div>
+          <div className="eyebrow uppercase mb-3 text-sm">{slice?.primary?.eyebrow}</div>
           <h1 className="text-4xl font-light leading-tight -ml-[0.05em] mb-4">{slice?.primary?.title}</h1>
           <div className="text-justify prose-2xl"> 
             <PrismicRichText field={slice?.primary?.description}/>
