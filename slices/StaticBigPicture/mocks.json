@@ -1,0 +1,68 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"label": {
+				"__TYPE__": "FieldContent",
+				"value": "giving",
+				"type": "Text"
+			},
+			"eyebrow": {
+				"__TYPE__": "FieldContent",
+				"value": "particular",
+				"type": "Text"
+			},
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "broken",
+				"type": "Text"
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Nisi excepteur laboris fugiat ea veniam ex deserunt esse nulla. Deserunt duis incididunt occaecat velit dolore in eiusmod ipsum minim labore et incididunt cupidatat non enim."
+						}
+					}
+				]
+			},
+			"image": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1551739440-5dd934d3a94a",
+					"width": 3456,
+					"height": 4320
+				},
+				"url": "https://images.unsplash.com/photo-1551739440-5dd934d3a94a",
+				"width": 3456,
+				"height": 4320,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"start_colour": {
+				"__TYPE__": "FieldContent",
+				"value": "#95fb36",
+				"type": "Color"
+			},
+			"end_colour": {
+				"__TYPE__": "FieldContent",
+				"value": "#d08175",
+				"type": "Color"
+			}
+		},
+		"items": []
+	}
+]

@@ -27,6 +27,12 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "people": {
+              "type": "SharedSlice"
+            },
+            "static_big_picture": {
+              "type": "SharedSlice"
+            },
             "mobile_video": {
               "type": "SharedSlice"
             },
