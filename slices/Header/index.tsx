@@ -18,10 +18,10 @@ const Header = ({ slice }: HeaderProps): JSX.Element => {
       className="w-full"
     >
       <div className="container mx-auto max-w-5xl p-6 flex-col lg:flex-row flex justify-between items-center">
-        <PrismicNextImage
+        <a href="/#"><PrismicNextImage
           className="es-call-to-action__image w-[300px]"
           field={slice.primary.logo} 
-        /> 
+        /></a>
         {/* variation: {slice.variation}   */}
         {/* <pre>{JSON.stringify(slice.primary,null,2)}</pre> */}
         <nav className="flex flex-wrap text-sm lg:text-lg gap-x-6">
