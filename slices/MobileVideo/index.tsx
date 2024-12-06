@@ -45,7 +45,7 @@ const MobileVideo = ({ slice }: MobileVideoProps): JSX.Element => {
             flex p-6 items-center justify-center \
             -mt-[100px] relative -bottom-[50px]
             scale-90 lg:scale-110">
-              <video autoPlay={true} controls loop className="w-[600px] aspect-[7/15] ">
+              <video controls loop className="w-[600px] aspect-[7/15] ">
                 <source src={slice.primary.video_hosted.url} type="video/mp4" />
               </video>
             </div> 

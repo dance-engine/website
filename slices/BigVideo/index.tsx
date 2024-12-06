@@ -29,7 +29,7 @@ const BigVideo = ({ slice }: BigVideoProps): JSX.Element => {
 
         <div className="mx-6 lg:mx-0">
           {isFilled.linkToMedia(slice.primary.video_hosted) 
-            ? <video autoPlay={true} controls loop className="mt-6 rounded-xl border-4  border-gray-50/20">
+            ? <video controls loop className="mt-6 rounded-xl border-4  border-gray-50/20">
                 <source src={slice.primary.video_hosted.url} type="video/mp4" />
               </video>
             : null }
