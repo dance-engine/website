@@ -6,6 +6,7 @@ export const components = {
   alternate_grid: dynamic(() => import("./AlternateGrid")),
   big_video: dynamic(() => import("./BigVideo")),
   call_to_action: dynamic(() => import("./CallToAction")),
+  contact_form: dynamic(() => import("./ContactForm")),
   customer_logos: dynamic(() => import("./CustomerLogos")),
   header: dynamic(() => import("./Header")),
   hero: dynamic(() => import("./Hero")),
