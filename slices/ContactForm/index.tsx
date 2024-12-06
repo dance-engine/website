@@ -20,7 +20,7 @@ const ContactForm = ({ slice }: ContactFormProps): JSX.Element => {
       data-slice-variation={slice.variation}
       className="w-full"
     >
-      <div className="container mx-auto text-lg max-w-5xl  py-20 w-full h-[100vh] min-height-32">
+      <div className="container mx-auto text-lg max-w-5xl w-full h-[80vh] min-height-32">
         {filloutId ? <FilloutStandardEmbed filloutId={filloutId} inheritParameters /> : null}
       </div>
     </section>
