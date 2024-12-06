@@ -1,0 +1,19 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "writing",
+				"type": "Text"
+			},
+			"fillout_form_id": {
+				"__TYPE__": "FieldContent",
+				"value": "beside",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]
