@@ -673,6 +673,51 @@ export type CustomerLogosSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *GenericText → Default → Primary*
+ */
+export interface GenericTextSliceDefaultPrimary {
+  /**
+   * Text field in *GenericText → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: generic_text.default.primary.text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  text: prismic.RichTextField;
+}
+
+/**
+ * Default variation for GenericText Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type GenericTextSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<GenericTextSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *GenericText*
+ */
+type GenericTextSliceVariation = GenericTextSliceDefault;
+
+/**
+ * GenericText Shared Slice
+ *
+ * - **API ID**: `generic_text`
+ * - **Description**: GenericText
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type GenericTextSlice = prismic.SharedSlice<
+  "generic_text",
+  GenericTextSliceVariation
+>;
+
+/**
  * Item in *Header → Default → Primary → Jump Links*
  */
 export interface HeaderSliceDefaultPrimaryJumpLinksItem {
@@ -1463,6 +1508,10 @@ declare module "@prismicio/client" {
       CustomerLogosSliceDefaultPrimary,
       CustomerLogosSliceVariation,
       CustomerLogosSliceDefault,
+      GenericTextSlice,
+      GenericTextSliceDefaultPrimary,
+      GenericTextSliceVariation,
+      GenericTextSliceDefault,
       HeaderSlice,
       HeaderSliceDefaultPrimaryJumpLinksItem,
       HeaderSliceDefaultPrimary,

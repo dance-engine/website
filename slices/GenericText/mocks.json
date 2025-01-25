@@ -1,0 +1,495 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"text": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading1",
+						"content": {
+							"text": "Merseyside Latin Festival Terms of Service",
+							"spans": [
+								{
+									"type": "strong",
+									"start": 0,
+									"end": 42
+								}
+							]
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Last Updated: 2024-08-01",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Welcome to the Merseyside Latin Festival website (\"Site\"). These Terms of Service (\"Terms\") govern your access to and use of our website, services, and products. By accessing or using our Site, you agree to be bound by these Terms and our Privacy Policy. If you do not agree with these Terms, please do not use the Site.",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "heading3",
+						"content": {
+							"text": "1. Acceptance of Terms",
+							"spans": [
+								{
+									"type": "strong",
+									"start": 0,
+									"end": 22
+								}
+							]
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "By accessing and using the Site, you accept and agree to be bound by these Terms and our Privacy Policy. We reserve the right to modify these Terms at any time. All changes will be effective immediately upon posting on the Site. Your continued use of the Site after any changes signifies your acceptance of the revised Terms.",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "heading3",
+						"content": {
+							"text": "2. Use of the Site",
+							"spans": [
+								{
+									"type": "strong",
+									"start": 0,
+									"end": 18
+								}
+							]
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "heading4",
+						"content": {
+							"text": "a. Eligibility",
+							"spans": [
+								{
+									"type": "strong",
+									"start": 0,
+									"end": 14
+								}
+							]
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "You must be at least 13 years old to use the Site. By using the Site, you represent and warrant that you have the right, authority, and capacity to enter into these Terms and to abide by all of the Terms.",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "heading4",
+						"content": {
+							"text": "b. User Account",
+							"spans": [
+								{
+									"type": "strong",
+									"start": 0,
+									"end": 15
+								}
+							]
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "To access certain features of the Site, you may be required to register for an account. You agree to provide accurate, current, and complete information during the registration process and update such information to keep it accurate, current, and complete.",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "heading4",
+						"content": {
+							"text": "c. Account Security",
+							"spans": [
+								{
+									"type": "strong",
+									"start": 0,
+									"end": 19
+								}
+							]
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "You are responsible for maintaining the confidentiality of your account login information and are fully responsible for all activities that occur under your account. You agree to notify us immediately of any unauthorized use or suspected unauthorized use of your account or any other breach of security.",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "heading4",
+						"content": {
+							"text": "d. Prohibited Conduct",
+							"spans": [
+								{
+									"type": "strong",
+									"start": 0,
+									"end": 21
+								}
+							]
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "You agree not to engage in any of the following prohibited activities:",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "list-item",
+						"content": {
+							"text": "Accessing or attempting to access any information not intended for you.",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "list-item",
+						"content": {
+							"text": "Using the Site in any manner that could interfere with, disrupt, or negatively affect the Site or the servers or networks connected to the Site.",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "list-item",
+						"content": {
+							"text": "Circumventing or attempting to circumvent any security features of the Site.",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "list-item",
+						"content": {
+							"text": "Using any automated means, including robots, spiders, or scrapers, to access the Site for any purpose without our express written permission.",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "list-item",
+						"content": {
+							"text": "Attempting to interfere with any other user's use of the Site.",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "list-item",
+						"content": {
+							"text": "Engaging in any fraudulent, illegal, or unauthorized activities.",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "heading3",
+						"content": {
+							"text": "3. User Content",
+							"spans": [
+								{
+									"type": "strong",
+									"start": 0,
+									"end": 15
+								}
+							]
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "heading4",
+						"content": {
+							"text": "a. Content Ownership",
+							"spans": [
+								{
+									"type": "strong",
+									"start": 0,
+									"end": 20
+								}
+							]
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "You retain all rights in, and are solely responsible for, the content you submit, post, or display on or through the Site (\"User Content\").",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "heading4",
+						"content": {
+							"text": "b. License to User Content",
+							"spans": [
+								{
+									"type": "strong",
+									"start": 0,
+									"end": 26
+								}
+							]
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "By submitting, posting, or displaying User Content on or through the Site, you grant us a worldwide, non-exclusive, royalty-free license to use, copy, reproduce, process, adapt, publish, transmit, display, and distribute such User Content in any and all media or distribution methods.",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "heading4",
+						"content": {
+							"text": "c. Content Restrictions",
+							"spans": [
+								{
+									"type": "strong",
+									"start": 0,
+									"end": 23
+								}
+							]
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "You agree not to post User Content that:",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "list-item",
+						"content": {
+							"text": "Is illegal, obscene, defamatory, threatening, or otherwise objectionable.",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "list-item",
+						"content": {
+							"text": "Infringes upon the rights of any third party, including intellectual property rights.",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "list-item",
+						"content": {
+							"text": "Contains any form of spam or unsolicited commercial messages.",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "heading3",
+						"content": {
+							"text": "4. Preferences and Communications",
+							"spans": [
+								{
+									"type": "strong",
+									"start": 0,
+									"end": 33
+								}
+							]
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "You may update your preferences regarding communications from us at any time by accessing your account settings. However, certain communications related to the services you have purchased, such as transaction confirmations and service updates, are necessary and cannot be opted out of.",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "heading3",
+						"content": {
+							"text": "5. Intellectual Property",
+							"spans": [
+								{
+									"type": "strong",
+									"start": 0,
+									"end": 24
+								}
+							]
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "All content, trademarks, service marks, and logos on the Site are our property or the property of our licensors and are protected by copyright, trademark, and other laws. You agree not to copy, reproduce, modify, or distribute any content from the Site without our express written permission.",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "heading3",
+						"content": {
+							"text": "6. Termination",
+							"spans": [
+								{
+									"type": "strong",
+									"start": 0,
+									"end": 14
+								}
+							]
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "We reserve the right, in our sole discretion, to terminate or suspend your access to the Site without notice if you violate these Terms or engage in any conduct that we deem to be unlawful, fraudulent, or harmful to us or any other user.",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "heading3",
+						"content": {
+							"text": "7. Limitation of Liability",
+							"spans": [
+								{
+									"type": "strong",
+									"start": 0,
+									"end": 26
+								}
+							]
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "To the fullest extent permitted by law, in no event shall Merseyside Latin Festival, its affiliates, directors, employees, or agents be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses, resulting from:",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "list-item",
+						"content": {
+							"text": "Your use or inability to use the Site.",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "list-item",
+						"content": {
+							"text": "Any unauthorized access to or use of our servers and/or any personal information stored therein.",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "list-item",
+						"content": {
+							"text": "Any interruption or cessation of transmission to or from the Site.",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "heading3",
+						"content": {
+							"text": "8. Governing Law",
+							"spans": [
+								{
+									"type": "strong",
+									"start": 0,
+									"end": 16
+								}
+							]
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "These Terms and your use of the Site will be governed by and construed in accordance with the laws of England and Wales, without giving effect to any principles of conflicts of law. You agree to submit to the exclusive jurisdiction of the courts located in England for the resolution of any disputes arising from or related to these Terms or your use of the Site.",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "heading3",
+						"content": {
+							"text": "9. Contact Us",
+							"spans": [
+								{
+									"type": "strong",
+									"start": 0,
+									"end": 13
+								}
+							]
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "If you have any questions about these Terms, please contact us at:",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Email: salsa@salsaliverpool.co.uk",
+							"spans": [
+								{
+									"type": "hyperlink",
+									"start": 7,
+									"end": 33,
+									"data": {
+										"__TYPE__": "ExternalLink",
+										"url": "mailto:salsa@salsaliverpool.co.uk",
+										"target": "_blank"
+									}
+								}
+							]
+						},
+						"direction": "ltr"
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]
