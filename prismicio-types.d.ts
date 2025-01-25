@@ -5,6 +5,7 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
 type PageDocumentDataSlicesSlice =
+  | GenericTextSlice
   | ContactFormSlice
   | CustomerLogosSlice
   | PeopleSlice
@@ -677,14 +678,24 @@ export type CustomerLogosSlice = prismic.SharedSlice<
  */
 export interface GenericTextSliceDefaultPrimary {
   /**
-   * Text field in *GenericText → Default → Primary*
+   * Content field in *GenericText → Default → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: generic_text.default.primary.text
+   * - **API ID Path**: generic_text.default.primary.content
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  text: prismic.RichTextField;
+  content: prismic.RichTextField;
+
+  /**
+   * Last Updated field in *GenericText → Default → Primary*
+   *
+   * - **Field Type**: Timestamp
+   * - **Placeholder**: *None*
+   * - **API ID Path**: generic_text.default.primary.last_updated
+   * - **Documentation**: https://prismic.io/docs/field#timestamp
+   */
+  last_updated: prismic.TimestampField;
 }
 
 /**

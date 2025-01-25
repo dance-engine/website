@@ -12,11 +12,17 @@ export type GenericTextProps = SliceComponentProps<Content.GenericTextSlice>;
  */
 const GenericText = ({ slice }: GenericTextProps): JSX.Element => {
   return (
-    <section
-      data-slice-type={slice.slice_type}
-      data-slice-variation={slice.variation}
-    >
-      <PrismicRichText field={slice.primary.text} />
+    <section className="p-4 bg-gray-100">
+      <div className="max-w-3xl mx-auto">
+        {slice.primary.last_updated && (
+          <p className="text-sm text-gray-500 mb-6">
+            Last Updated: {new Date(slice.primary.last_updated).toLocaleDateString()}
+          </p>
+        )}
+        <div className="prose">
+          <PrismicRichText field={slice.primary.content} />
+        </div>
+      </div>
     </section>
   );
 };
