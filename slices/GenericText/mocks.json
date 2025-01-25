@@ -1,0 +1,25 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"content": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Non non consectetur sunt dolor ullamco sint laborum ad ullamco dolore aute. Amet do ut id enim culpa est non nulla voluptate pariatur ullamco do tempor laboris irure."
+						}
+					}
+				]
+			},
+			"last_updated": {
+				"__TYPE__": "FieldContent",
+				"type": "Timestamp",
+				"value": "2022-01-07T16:57:01Z"
+			}
+		},
+		"items": []
+	}
+]

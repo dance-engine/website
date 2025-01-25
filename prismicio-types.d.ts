@@ -5,6 +5,7 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
 type PageDocumentDataSlicesSlice =
+  | GenericTextSlice
   | ContactFormSlice
   | CustomerLogosSlice
   | PeopleSlice
@@ -670,6 +671,61 @@ type CustomerLogosSliceVariation = CustomerLogosSliceDefault;
 export type CustomerLogosSlice = prismic.SharedSlice<
   "customer_logos",
   CustomerLogosSliceVariation
+>;
+
+/**
+ * Primary content in *GenericText → Default → Primary*
+ */
+export interface GenericTextSliceDefaultPrimary {
+  /**
+   * Content field in *GenericText → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: generic_text.default.primary.content
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  content: prismic.RichTextField;
+
+  /**
+   * Last Updated field in *GenericText → Default → Primary*
+   *
+   * - **Field Type**: Timestamp
+   * - **Placeholder**: *None*
+   * - **API ID Path**: generic_text.default.primary.last_updated
+   * - **Documentation**: https://prismic.io/docs/field#timestamp
+   */
+  last_updated: prismic.TimestampField;
+}
+
+/**
+ * Default variation for GenericText Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type GenericTextSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<GenericTextSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *GenericText*
+ */
+type GenericTextSliceVariation = GenericTextSliceDefault;
+
+/**
+ * GenericText Shared Slice
+ *
+ * - **API ID**: `generic_text`
+ * - **Description**: GenericText
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type GenericTextSlice = prismic.SharedSlice<
+  "generic_text",
+  GenericTextSliceVariation
 >;
 
 /**
@@ -1463,6 +1519,10 @@ declare module "@prismicio/client" {
       CustomerLogosSliceDefaultPrimary,
       CustomerLogosSliceVariation,
       CustomerLogosSliceDefault,
+      GenericTextSlice,
+      GenericTextSliceDefaultPrimary,
+      GenericTextSliceVariation,
+      GenericTextSliceDefault,
       HeaderSlice,
       HeaderSliceDefaultPrimaryJumpLinksItem,
       HeaderSliceDefaultPrimary,
