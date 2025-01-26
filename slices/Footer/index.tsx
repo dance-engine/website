@@ -15,7 +15,7 @@ const Footer = ({ slice }: FooterProps): JSX.Element => {
     <footer
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="w-full bg-gray-800 text-white"
+      className="w-full bg-background text-white"
     >
       <div className="container mx-auto max-w-5xl p-6">
         <div className="flex flex-col lg:flex-row justify-between items-center">
