@@ -5,6 +5,7 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
 type PageDocumentDataSlicesSlice =
+  | FooterSlice
   | GenericTextSlice
   | ContactFormSlice
   | CustomerLogosSlice
@@ -672,6 +673,105 @@ export type CustomerLogosSlice = prismic.SharedSlice<
   "customer_logos",
   CustomerLogosSliceVariation
 >;
+
+/**
+ * Item in *Footer → Default → Primary → Footer Links*
+ */
+export interface FooterSliceDefaultPrimaryFooterLinksItem {
+  /**
+   * Link field in *Footer → Default → Primary → Footer Links*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.footer_links[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+}
+
+/**
+ * Primary content in *Footer → Default → Primary*
+ */
+export interface FooterSliceDefaultPrimary {
+  /**
+   * Logo field in *Footer → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.logo
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  logo: prismic.ImageField<never>;
+
+  /**
+   * Footer Links field in *Footer → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.footer_links[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  footer_links: prismic.GroupField<
+    Simplify<FooterSliceDefaultPrimaryFooterLinksItem>
+  >;
+
+  /**
+   * Terms of Service Link field in *Footer → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.terms_of_service_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  terms_of_service_link: prismic.LinkField;
+
+  /**
+   * Privacy Policy Link field in *Footer → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.privacy_policy_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  privacy_policy_link: prismic.LinkField;
+
+  /**
+   * Company Name field in *Footer → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Dance Engine Ltd
+   * - **API ID Path**: footer.default.primary.company_name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  company_name: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for Footer Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FooterSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<FooterSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Footer*
+ */
+type FooterSliceVariation = FooterSliceDefault;
+
+/**
+ * Footer Shared Slice
+ *
+ * - **API ID**: `footer`
+ * - **Description**: Footer
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FooterSlice = prismic.SharedSlice<"footer", FooterSliceVariation>;
 
 /**
  * Primary content in *GenericText → Default → Primary*
@@ -1519,6 +1619,11 @@ declare module "@prismicio/client" {
       CustomerLogosSliceDefaultPrimary,
       CustomerLogosSliceVariation,
       CustomerLogosSliceDefault,
+      FooterSlice,
+      FooterSliceDefaultPrimaryFooterLinksItem,
+      FooterSliceDefaultPrimary,
+      FooterSliceVariation,
+      FooterSliceDefault,
       GenericTextSlice,
       GenericTextSliceDefaultPrimary,
       GenericTextSliceVariation,
