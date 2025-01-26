@@ -8,6 +8,7 @@ export const components = {
   call_to_action: dynamic(() => import("./CallToAction")),
   contact_form: dynamic(() => import("./ContactForm")),
   customer_logos: dynamic(() => import("./CustomerLogos")),
+  footer: dynamic(() => import("./Footer")),
   generic_text: dynamic(() => import("./GenericText")),
   header: dynamic(() => import("./Header")),
   hero: dynamic(() => import("./Hero")),
